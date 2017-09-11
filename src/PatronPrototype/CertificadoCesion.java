@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package patronprototipo;
+package PatronPrototype;
 
 /**
  *
@@ -12,8 +12,15 @@ package patronprototipo;
 public class CertificadoCesion extends Documento{
 
     @Override
-    public Documento duplicar() {
-        return null;
+    public String imprime() {
+        return this.toString();
     }
+
+    @Override
+    public String toString() {
+        return "Certificado de Cesion";
+    }
+
+    
     
 }

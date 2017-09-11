@@ -3,12 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package patronprototipo;
+package PatronPrototype;
 
 /**
  *
  * @author Fuller 101
  */
-public class DocumentacionBlanco {
+public class DocumentacionBlanco extends Documentacion{
+    
+    public DocumentacionBlanco(){
+        
+    }
+    
+    public void incluye (Documento doc){
+        getListaDocumentos().add(doc);
+    }
+    
+    public void excluye (Documento doc){
+        getListaDocumentos().remove(doc);
+    }
     
 }

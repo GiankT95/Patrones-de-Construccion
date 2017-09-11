@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package patronprototipo;
+package PatronPrototype;
 
 /**
  *
@@ -11,7 +11,17 @@ package patronprototipo;
  */
 public abstract class Documento implements Cloneable{
     
-    public abstract Documento duplicar();
+    public Documento duplicar() throws CloneNotSupportedException{
+        
+        Documento documentoClon = (Documento) this.clone();
+        
+        return documentoClon;
+    }
     
+    public void rellena (String info){
+        System.out.println(imprime() +"\n"+ info);
+    }
+    
+    public abstract String imprime();
     
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package patronprototipo;
+package PatronPrototype;
 
 /**
  *
@@ -11,4 +11,11 @@ package patronprototipo;
  */
 public class DocumentacionCliente {
     
+    public DocumentacionCliente(){
+        
+    }
+    
+    public void crea(){
+        
+    }
 }

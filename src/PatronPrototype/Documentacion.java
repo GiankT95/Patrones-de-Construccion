@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package patronprototipo;
+package PatronPrototype;             
 
 import java.util.ArrayList;
 
@@ -13,6 +13,11 @@ import java.util.ArrayList;
  */
 public abstract class Documentacion {
     
-    ArrayList<Documento> listaDocumentos;
+    protected ArrayList<Documento> listaDocumentos;
+
+    public ArrayList<Documento> getListaDocumentos() {
+        return listaDocumentos;
+    }
+
     
 }
