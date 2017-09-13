@@ -5,6 +5,8 @@
  */
 package PatronPrototype;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Fuller 101
@@ -13,6 +15,7 @@ public class DocumentacionBlanco extends Documentacion{
     
     public DocumentacionBlanco(){
         
+        this.listaDocumentos = new ArrayList();
     }
     
     public void incluye (Documento doc){

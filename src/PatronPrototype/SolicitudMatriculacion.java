@@ -12,8 +12,9 @@ package PatronPrototype;
 public class SolicitudMatriculacion extends Documento{
 
     @Override
-    public String imprime() {
-        return this.toString();
+    public void imprime() {
+        
+        System.out.println(this.toString() +"\n"+ this.cuerpo);
     }
 
     @Override

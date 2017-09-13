@@ -5,17 +5,28 @@
  */
 package PatronPrototype;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Fuller 101
  */
-public class DocumentacionCliente {
+public class DocumentacionCliente extends Documentacion{
     
     public DocumentacionCliente(){
         
+        this.listaDocumentos = new ArrayList();
     }
     
-    public void crea(){
+    public void crea(String informacion, DocumentacionBlanco docBlanco) throws CloneNotSupportedException{
         
+        for(Documento doc : docBlanco.getListaDocumentos()){
+            
+            Documento docClon = doc.duplicar();
+            docClon.rellena(informacion); 
+            this.listaDocumentos.add(docClon);
+        }
+            
     }
+  
 }

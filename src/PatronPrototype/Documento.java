@@ -11,6 +11,8 @@ package PatronPrototype;
  */
 public abstract class Documento implements Cloneable{
     
+    protected String cuerpo;
+    
     public Documento duplicar() throws CloneNotSupportedException{
         
         Documento documentoClon = (Documento) this.clone();
@@ -19,9 +21,19 @@ public abstract class Documento implements Cloneable{
     }
     
     public void rellena (String info){
-        System.out.println(imprime() +"\n"+ info);
+        
+        this.setCuerpo(info);
+  
     }
     
-    public abstract String imprime();
+    public abstract void imprime();
+
+    public String getCuerpo() {
+        return cuerpo;
+    }
+
+    public void setCuerpo(String cuerpo) {
+        this.cuerpo = cuerpo;
+    }
     
 }
