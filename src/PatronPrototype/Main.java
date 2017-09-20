@@ -15,23 +15,14 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws CloneNotSupportedException {
-        
-        OrdenDePedido op = new OrdenDePedido();
-        SolicitudMatriculacion sm = new SolicitudMatriculacion();
-        CertificadoCesion cc = new CertificadoCesion();
-        
-        DocumentacionBlanco docBlanco= new DocumentacionBlanco();
-        
-        docBlanco.incluye(op);
-        docBlanco.incluye(sm);
-        docBlanco.incluye(cc);
-        
-        DocumentacionCliente docCliente= new DocumentacionCliente();
-        
-        docCliente.crea("Informacion del cliente.\n", docBlanco);
+
+        DocumentacionCliente docCliente = new DocumentacionCliente();
+
+        docCliente.crea("Informacion de la compra del cliente.\n", GestorDocumentos.instance().documentacionCompra());
         docCliente.imprime();
-        
-        docBlanco.imprime();
+
+        docCliente = new DocumentacionCliente();
+        docCliente.crea("Informacion de la garantia del cliente.\n", GestorDocumentos.instance().documentacionDevolucion());
+        docCliente.imprime();
     }
-    
 }
